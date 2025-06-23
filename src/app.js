@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static(__dirname + '/public'))
-const PORT = 9090;
+const PORT = process.env.PORT || 9090;
 
 // configuracion de HBS
 app.engine('handlebars', handlebars.engine());
